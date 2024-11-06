@@ -1,0 +1,132 @@
+ผู้ใช้:
+"ช่วยตั้งค่า IP Address ให้กับ interface GigabitEthernet0/0 หน่อย"
+
+Chatbot:
+"ได้ค่ะ คำสั่งตั้งค่า IP Address สำหรับ interface GigabitEthernet0/0 คือ:
+
+
+enable
+configure terminal
+interface GigabitEthernet0/0
+ip address [IP Address] [Subnet Mask]
+no shutdown
+exit
+เช่น ถ้าคุณต้องการตั้งค่า IP เป็น 192.168.1.1 และ Subnet Mask เป็น 255.255.255.0:
+
+
+enable
+configure terminal
+interface GigabitEthernet0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+```"
+
+---
+
+**ผู้ใช้:**  
+"ช่วยสร้าง VLAN ใหม่หน่อย"
+
+**Chatbot:**  
+"แน่นอนค่ะ คำสั่งสำหรับสร้าง VLAN ใหม่คือ:  
+
+enable
+configure terminal
+vlan [VLAN ID]
+name [VLAN Name]
+exit
+เช่น ถ้าคุณต้องการสร้าง VLAN ID 10 และตั้งชื่อว่า 'HR':
+
+
+enable
+configure terminal
+vlan 10
+name HR
+exit
+```"
+
+---
+
+**ผู้ใช้:**  
+"ตั้งค่า Default Gateway ให้ Switch หน่อย"
+
+**Chatbot:**  
+"คำสั่งตั้งค่า Default Gateway สำหรับ Switch มีดังนี้:  
+
+enable
+configure terminal
+ip default-gateway [Gateway IP]
+exit
+
+เช่น ถ้าคุณต้องการตั้งค่า Default Gateway เป็น 192.168.1.1:
+
+enable
+configure terminal
+ip default-gateway 192.168.1.1
+exit
+```"
+
+---
+
+**ผู้ใช้:**  
+"ช่วยเปิดใช้งาน SSH บน Router ให้หน่อย"
+
+**Chatbot:**  
+"การตั้งค่า SSH บน Router ใช้คำสั่งดังนี้ค่ะ:  
+
+enable
+configure terminal
+ip domain-name [domain-name]
+crypto key generate rsa
+username [username] secret [password]
+line vty 0 4
+login local
+transport input ssh
+exit
+
+เช่น ถ้าคุณต้องการตั้งค่า domain-name เป็น 'example.com' และตั้งค่า username เป็น 'admin' พร้อมกับรหัสผ่าน 'cisco123':
+
+enable
+configure terminal
+ip domain-name example.com
+crypto key generate rsa
+username admin secret cisco123
+line vty 0 4
+login local
+transport input ssh
+exit
+```"
+
+---
+
+**ผู้ใช้:**  
+"ช่วยเพิ่ม static route หน่อย"
+
+**Chatbot:**  
+"คำสั่งสำหรับเพิ่ม Static Route บน Router คือ:  
+
+enable
+configure terminal
+ip route [Destination Network] [Subnet Mask] [Next-hop IP Address]
+exit
+
+
+เช่น ถ้าคุณต้องการเพิ่ม static route สำหรับเครือข่าย 192.168.2.0 ที่ใช้ subnet mask 255.255.255.0 และ next-hop IP เป็น 192.168.1.2:
+
+enable
+configure terminal
+ip route 192.168.2.0 255.255.255.0 192.168.1.2
+exit
+```"
+
+---
+
+**ผู้ใช้:**  
+"บันทึกการตั้งค่าหน่อย"
+
+**Chatbot:**  
+"คำสั่งสำหรับบันทึกการตั้งค่าคือ:  
+
+copy running-config startup-config
+```"
+
