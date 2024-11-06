@@ -1,0 +1,1 @@
+curl -L -o Nititat.zip https://github.com/RawipornS/NLP-Final2/archive/refs/heads/main.zip
